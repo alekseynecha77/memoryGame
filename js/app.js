@@ -94,7 +94,7 @@ function checkforMatch(){
     cardsChosenId=[];
     resultDisplay.textContent = cardsWon.length;
     if(cardsWon.length === cardArray.length/2){
-        resultDisplay.textContent = 'congrats';
+        resultDisplay.textContent = 'congrats you got all the matches correct';
     }
 
 }
