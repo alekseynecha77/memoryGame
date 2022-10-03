@@ -107,9 +107,9 @@ function flipCard(){
     var cardId = this.getAttribute('data-id');
 
     cardArray.forEach((object) => {
-        cardsChosen.push(cardArray[cardId].name);
-        cardsChosen.push(cardId);
-        cardsChosen.push(object);
+        cardsChosenId.push(cardArray[cardId].name);
+        cardsChosenId.push(cardId);
+        cardsChosenId.push(object);
 
 
         /* cardsChosenId.push(object);        
@@ -127,9 +127,7 @@ function flipCard(){
 
 }
 
-console.log(cardsChosen);
-
-
+console.log(cardsChosenId);
 
 
 
