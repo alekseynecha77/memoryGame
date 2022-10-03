@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', ()=>{
 
-
+//creating card Array
     const cardArray = [
         {
             name: 'logo',
