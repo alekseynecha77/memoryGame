@@ -105,30 +105,24 @@ function checkforMatch(){
 function flipCard(){
 
 
-    cardArray.forEach((object) => {
         var cardId = this.getAttribute('data-id');
 
-        cardsChosenId.push(cardArray[cardId].name);
+        cardsChosen.push(cardArray[cardId].name);
         cardsChosenId.push(cardId);
-        cardsChosenId.push(object);
 
 
-        /* cardsChosenId.push(object);        
-        cardsChosenId.push(cardArray[cardId].img);
- */
+ 
 
 
         this.setAttribute('src', cardArray[cardId].img);
-        if(cardsChosen.length ===2 ){
+        if(cardsChosen.length === 2 ){
             setTimeout(checkforMatch, 500)
         }
         
-    })
+
   
 
 }
-
-console.log(cardsChosenId);
 
 
 
