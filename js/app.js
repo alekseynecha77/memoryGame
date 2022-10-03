@@ -104,9 +104,10 @@ function checkforMatch(){
 //flip your card
 function flipCard(){
 
-    var cardId = this.getAttribute('data-id');
 
     cardArray.forEach((object) => {
+        var cardId = this.getAttribute('data-id');
+
         cardsChosenId.push(cardArray[cardId].name);
         cardsChosenId.push(cardId);
         cardsChosenId.push(object);
@@ -117,13 +118,13 @@ function flipCard(){
  */
 
 
-
+        this.setAttribute('src', cardArray[cardId].img);
+        if(cardsChosen.length ===2 ){
+            setTimeout(checkforMatch, 500)
+        }
+        
     })
-    this.setAttribute('src', cardArray[cardId].img);
-    if(cardsChosen.length ===2 ){
-        setTimeout(checkforMatch, 500)
-    }
-    
+  
 
 }
 
