@@ -107,7 +107,14 @@ function flipCard(){
     var cardId = this.getAttribute('data-id');
 
     cardArray.forEach((object) => {
+        cardsChosen.push(cardArray[cardId].name);
+        cardsChosen.push(cardId);
         cardsChosen.push(object);
+
+
+        /* cardsChosenId.push(object);        
+        cardsChosenId.push(cardArray[cardId].img);
+ */
 
 
 
