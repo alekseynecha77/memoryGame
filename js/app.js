@@ -1,6 +1,4 @@
 
-document.addEventListener('DOMContentLoaded', ()=>{
-
 //creating card Array
     const cardArray = [
         {
@@ -53,7 +51,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
     ]        
 
-
+//sorting card array so each time
+// user refresh page images will go in random positions
 cardArray.sort(()=> 0.5 - Math.random());
 
 const grid = document.querySelector('.grid');
@@ -63,7 +62,7 @@ var cardsChosen =[];
  var cardsWon =[];
 
 
-
+//create board of cards with images from array
 function createBoard(){
 
     for(let i =0; i< cardArray.length; i++){
@@ -77,7 +76,9 @@ function createBoard(){
 
 //Check for matches
 function checkforMatch(){
-
+//setting if two cards are the same, 0 and 1
+//the alert you found match and the cards will appear to be white
+//if not gradient blank appear
     var cards = document.querySelectorAll('img');
     const optionOneId = cardsChosenId[0];
     const optionTwoId= cardsChosenId[1];
@@ -95,6 +96,7 @@ function checkforMatch(){
     }
     cardsChosen=[];
     cardsChosenId=[];
+    //if you predict all the images the textcontent will say congrats
     resultDisplay.textContent = cardsWon.length;
     if(cardsWon.length === cardArray.length/2){
         resultDisplay.textContent = 'congrats you got all the matches correct';
@@ -104,7 +106,8 @@ function checkforMatch(){
 //flip your card
 function flipCard(){
 
-
+//create var that will get attribute of data-id
+//then push card chosen and card chosen id
         var cardId = this.getAttribute('data-id');
 
         cardsChosen.push(cardArray[cardId].name);
@@ -113,7 +116,8 @@ function flipCard(){
 
  
 
-
+//then we will set attribute so data -id will appear as car img
+//then we will check if we pick two cards then it will check for match
         this.setAttribute('src', cardArray[cardId].img);
         if(cardsChosen.length === 2 ){
             setTimeout(checkforMatch, 500)
@@ -125,15 +129,12 @@ function flipCard(){
 }
 
 
-
+//createboard
 createBoard();
     
 
 
 
-
-
-})
 
 
 
