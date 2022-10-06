@@ -74,7 +74,7 @@ function createBoard(){
 for(let i = 0; i< cardArray.length; i++){
  var card = document.createElement('img');
  card.setAttribute('src', 'img/blank.jpg');
- card.setAttribute('datai-id', i);
+ card.setAttribute('data-id', i);
  card.addEventListener('click', flipCard);
  grid.appendChild(card);
 

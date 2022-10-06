@@ -1,6 +1,18 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  background:#218bc4a5;
+
+}
+
 .grid{
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
   height: 300px;
   width: 400px;
+
 }
